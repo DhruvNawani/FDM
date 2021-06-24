@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+  <!-- css -->
+  <link rel="stylesheet" href="/scss/contact_us.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <title>Contact us</title>
+</head>
+
+<body>
+
+  <!-- =============================================NAVBAR==================================================== -->
+  <header>
+    <div class="mainheader">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="/home"><img src="/icons/FDM.png" alt="" id="nav-logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="/home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/portfolio">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact_us">Contact us</a>
+              </li>
+              <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li> -->
+              <!-- <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li> -->
+            </ul>
+            <!-- <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form> -->
+      <% if(!logged) { %>
+        <a href="/login" class="my-btn"><img src="/icons/login1.svg" id="login" alt=""></a>
+      <% } else { %>
+        <img src="/icons/profile1.svg" id="profile_img" alt="">
+        <ul id="dropdown" class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item"><a href="/profile" class="nav-link">Your Profile</a></li>
+          <li class="nav-item"><a href="/logout"  class="nav-link">
+            <!-- <img src="/icons/login1.svg" id="logout_img" alt=""> -->
+            Logout</a></li>
+        </ul>
+      <% } %>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ======================================================CONTENT============================================== -->
+
+  <section class="contact_us_page text-center">
+    <h1 class="heading1">Fabulous Digital Managements</h1>
+    <h2>Contact us</h2>
+    <div class="col-lg-10 col-10 mx-auto" id="col2">
+
+      <p>To get in-touch with us, and our support team, contact us using any of the given services. We'd be happy to
+        help.
+        Follow us on these social media platform to stay updated about our latest services and incluisons.</p>
+      <form action="/contact_us" method="POST">
+        <div class="form_top row" id="row">
+          <div class="col-lg-4">
+            <label for="name"><b>Name:</b></label>
+            <input type="text" id="name" class="form-control" name="name" placeholder="Enter your name">
+          </div>
+          <div class="col-lg-4">
+            <label for="mob_no"><b>Contact no.:</b></label>
+            <input type="text" id="contact" class="form-control" name="contact" placeholder="Enter your contact no.">
+          </div>
+          <div class="col-lg-4">
+            <label for="email"><b>Email:</b></label>
+            <input type="text" id="email" class="form-control" name="email" placeholder="Enter yor E-mail ID">
+          </div>
+        </div>
+        <div>
+          <label for="req" class="req"><b>Message:</b></label><br>
+          <textarea id="message" cols="98" rows="5" name="message" class="form-control"></textarea>
+        </div><br>
+        <div class="container" style="text-align: center;">
+          <input type="submit" class="sub btn btn-dark" id="btn2">
+        </div>
+      </form>
+    </div>
+  </section>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6677.070888068445!2d72.51397405996461!3d23.031368056568223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDAxJzU5LjQiTiA3MsKwMzEnMDIuNiJF!5e0!3m2!1sen!2sin!4v1612077410429!5m2!1sen!2sin"
+    width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"
+    class="map-responsive"></iframe>
+
+
+
+  <!-- ======================================================FOOTER=============================================== -->
+
+  <footer>
+    <div class="row text-center">
+      <div class="col-md-4 logo_img">
+        <img src="images/icons/FDM.png" alt="FDM Logo">
+      </div>
+      <div class="col-md-4">
+        <h4 style="text-align: left; font-size: 20px;"><b>Fabulous Digital Managements</b></h4>
+        <p style="text-align: left;">A 001, 1st Floor, Turquoise Plaza,<br>
+          Above Everyone,<br>
+          Near Nobody,<br>
+          Satellite, Ahmedabad,<br>
+          Gujarat 380007 <br>
+          support@fabulosdigitalmanagement.in <br>
+          +91-9898989898</p>
+      </div>
+      <div class="col-md-4">
+        <h3><b>Get in touch.</b></h3>
+        <p>To get in-touch with us, please subscribe to our email service.</p>
+        <input type="email" id="subs" style="position: relative; top : 3px; height: 20px; width: 50%">
+        <button type="button" class="sub btn btn-dark" id="btn1">Submit</button><br><br>
+        <img src="images/icons/fb.svg" alt="fb" style="width: 30px;height: 30px;margin-right: 10px;">
+        <img src="images/icons/insta.svg" alt="insta" style="width: 30px;height: 30px;margin-right: 10px;">
+        <img src="images/icons/linkedin.svg" alt="twitter" style="width: 30px;height: 30px;margin-right: 10px;">
+        <img src="images/icons/twitter.svg" alt="linkedin" style="width: 30px;height: 30px;margin-right: 10px;">
+        <img src="images/icons/whatsapp.svg" alt="whatsapp" style="width: 30px;height: 30px;">
+        <br><br>
+      </div>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      ©
+      <script type="text/javascript">
+        document.write(new Date().getFullYear());
+      </script> Copyright:
+      <a href="#">Fabulous Digital Managements, Inc. All Rights Reserved.</a>
+    </div>
+  </footer>
+
+
+
+  <!-- =======================================================JAVASCRIPT======================================================= -->
+
+  <!-- INTERNAL JAVASCRIPT -->
+  <script src="/js/contact_us.js"></script>
+
+  <!-- BOOTSTRAP JAVASCRIPT -->
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>-->
+
+
+</body>
+
+</html>

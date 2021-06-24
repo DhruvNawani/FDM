@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+  <!-- css -->
+  <link rel="stylesheet" href="/scss/services.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>
+    $(function () {
+      var dtToday = new Date();
+
+      var month = dtToday.getMonth() + 1;
+      var day = dtToday.getDate();
+      var year = dtToday.getFullYear();
+      if (month < 10)
+        month = '0' + month.toString();
+      if (day < 10)
+        day = '0' + day.toString();
+
+      var maxDate = year + '-' + month + '-' + day;
+      $('#txtDate').attr('min', maxDate);
+      $('#endDate').attr('min', maxDate);
+      $('#txtDate').attr('value', maxDate);
+      $('#endDate').attr('value', maxDate);
+    });
+  </script>
+  <title>FDM-Services</title>
+</head>
+
+<body>
+
+
+  <!-- =============================================NAVBAR==================================================== -->
+
+  <header>
+    <div class="mainheader">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="/home"><img src="/icons/FDM.png" alt="" id="nav-logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="/home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/portfolio">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact_us">Contact us</a>
+              </li>
+              <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li> -->
+              <!-- <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li> -->
+            </ul>
+            <!-- <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form> -->
+            <% if(!logged) { %>
+              <a href="/login" class="my-btn"><img src="/icons/login1.svg" id="login" alt=""></a>
+              <% } else { %>
+                <img src="/icons/profile1.svg" id="profile_img" alt="">
+                <ul id="dropdown" class="navbar-nav mb-2 mb-lg-0">
+                  <li class="nav-item"><a href="/profile" class="nav-link">Your Profile</a></li>
+                  <li class="nav-item"><a href="/logout" class="nav-link">
+                      <!-- <img src="/icons/login1.svg" id="logout_img" alt=""> -->
+                      Logout
+                    </a></li>
+                </ul>
+                <% } %>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ======================================================CONTENT============================================== -->
+
+
+  <h1 class="heading1 text-center">Fabulous Digital Managements</h1>
+  <h2>Customize your event here!</h2>
+
+  <section id="services_page">
+    <div class="col-lg-10 col-10 mx-auto" id="col2">
+      <p>The website will help our clients to organize amazing events with reasonable budget.
+        The website provides multiple options to select event type, destination, venues, caterers, decorators etc.
+        To reduce the cumbersome job of physically managing and handling the clients.
+        Speed up the searching for desired services needed by customer on the basis their requirements.
+        Making the System and InterfaceUser Friendly by reducing complexity of current one.
+        The website itself provides multiple options to select event type, destination, theme, venues, caterers,
+        decorators as per the customer’s requirement.
+        Also, the customers will have a flexible choice which lets them choose their own budget range.
+        The users will have their own independent choices regarding the catering services, decoration services and
+        other coordinative services based on the genuine reviews and ratings given by the previous users.
+        The additional feature of a private consultant for the event lets the customer freely evaluate the viable
+        options which best suits them.</p>
+    </div>
+  </section>
+
+  <!-- ===================================================EVENT CUSTOMIZATION===================================== -->
+
+  <div class="container1">
+
+    <!-- ===================================================EVENT LOCATION========================================== -->
+
+    <form action="" id="form1" name="form1">
+      <h3 class="fh3">EVENT LOCATION</h3>
+      <div class="loc">
+        <label for="loc1">Local</label>
+        <input type="radio" name="loc" id="loc1" value="Local" checked>
+      </div>
+      <div class="loc">
+        <label for="loc2">Destinaton</label>
+        <input type="radio" name="loc" id="loc2" value="Destination">
+      </div>
+      <div id="des" hidden>
+        <label for="dest">Select Destination </label>
+        <select name="" id="dest">
+          <option value="ct" selected hidden>City</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Jaipur">Jaipur</option>
+        </select>
+      </div>
+      <div class="btn-box">
+        <button type="button" id="next1">Next</button>
+      </div>
+    </form>
+
+    <!-- =====================================================EVENT TYPE============================================ -->
+
+    <form action="" id="form2">
+      <h3 class="fh3">EVENT TYPE</h3>
+      <div class="loc">
+        <label for="dest">Select Event Type</label>
+        <select name="" id="eventType">
+          <!-- <option value="tp" selected hidden>Type</option> -->
+          <option value="Social" selected>Social</option>
+          <option value="Corporate">Corporate</option>
+          <option value="Activation">Activation</option>
+          <option value="Sports">Sports</option>
+          <option value="Academic">Academic</option>
+          <option value="Virtual">Virtual Event</option>
+        </select>
+      </div>
+      <div class="loc">
+        <label for="dest">Select Sub-Event Type</label>
+        <select name="" id="Social">
+          <!-- <option value="tp" selected hidden>Sub Event Type</option> -->
+          <option value="Wedding" selected>Wedding</option>
+          <option value="Engagement">Engagement</option>
+          <option value="Birthday">Birthday</option>
+          <option value="Anniversary">Anniversary</option>
+          <option value="Bachelor's Party">Bachelor's Party</option>
+          <option value="Lottery">Lottery</option>
+          <option value="Draw">Draw</option>
+          <option value="Festive">Festive</option>
+          <option value="Expo">Expo</option>
+        </select>
+        <select name="" id="Corporate" hidden>
+          <!-- <option value="tp" selected hidden>Sub Event Type</option> -->
+          <option value="Conference" selected>Conference</option>
+          <option value="Product Launch">Product Launch</option>
+          <option value="Association and Membership">Association and Membership</option>
+          <option value="Board and Shareholder Meetings">Board and Shareholder Meetings</option>
+          <option value="ISP/NSP">ISP/NSP</option>
+          <option value="R&R">R&R</option>
+        </select>
+        <select name="" id="Activation" hidden>
+          <!-- <option value="tp" selected hidden>Sub Event Type</option> -->
+          <option value="Innauguration" selected>Innauguration</option>
+          <option value="Campaigns">Campaigns</option>
+        </select>
+        <select name="" id="Sports" hidden>
+          <!-- <option value="tp" selected hidden>Sub Event Type</option> -->
+          <option value="Cricket" selected>Cricket</option>
+          <option value="Football">Football</option>
+          <option value="Volleyball">Volleyball</option>
+          <option value="Badminton">Badminton</option>
+          <option value="Hockey">Hockey</option>
+          <option value="Marathon">Marathon</option>
+          <option value="Triathlon">Triathlon</option>
+        </select>
+        <select name="" id="Academic" hidden>
+          <!-- <option value="tp" selected hidden>Sub Event Type</option> -->
+          <option value="Quizzes">Quizzes</option>
+          <option value="Coding Competition" selected>Coding Competitions</option>
+          <option value="Other Academic Events">Other Academic Events</option>
+        </select>
+        <select name="" id="Virtual" hidden>
+          <!-- <option value="tp" selected hidden>Sub Event Type</option> -->
+          <option value="Virtual Meets" selected>Virtual Meets</option>
+        </select>
+      </div>
+      <div class="btn-box">
+        <button type="button" id="prev1">Previous</button>
+        <button type="button" id="next2">Next</button>
+      </div>
+    </form>
+
+    <!-- ================================================EVENT SCHEDULING============================================== -->
+
+    <form action="" id="form3">
+      <h3 class="fh3">Scheduling</h3>
+      <div class="st_dt">
+        <label for="st-dt">Start Date</label>
+        <input type="date" id="txtDate" required>
+      </div>
+      <div class="ed_dt">
+        <label for="ed-dt">End Date </label>
+        <input type="date" id="endDate" required>
+      </div>
+      <div class="btn-box">
+        <button type="button" id="prev2">Previous</button>
+        <button type="button" id="next3">Next</button>
+      </div>
+    </form>
+
+    <!-- ==================================================EVENT BUDGET============================================ -->
+
+    <form action="" id="form4">
+      <h3 class="fh3">BUDGET & INVITEES</h3>
+      <h5>Number of invitees:</h5>
+      <div class="slidecontainer">
+        <input type="range" min="50" max="10000" value="50" class="slider" id="invitees">
+        <p>Value: <span id="persons"></span></p>
+      </div>
+      <h5>Budget:</h5>
+      <div class="slidecontainer">
+        <input type="range" min="50000" max="50000000" value="55000" class="slider" id="myRange">
+        <p>Value: <span id="demo"></span></p>
+      </div>
+      
+      <div class="btn-box">
+        <button type="button" id="prev3">Previous</button>
+        <button type="button" id="next4">Next</button>
+      </div>
+    </form>
+
+
+    <!-- ====================================================EVENT VENUE============================================ -->
+
+    <form action="" id="form5" name="form5">
+      <h3 class="fh3">VENUE</h3>
+      <div class="loc">
+        <label for="ven1">Open</label>
+        <input type="radio" name="ven" id="ven1" checked>
+      </div>
+      <div class="loc">
+        <label for="ven2">Contained</label>
+        <input type="radio" name="ven" id="ven2">
+      </div>
+      <div id="venueCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" id="venueCarouselInnerDiv">
+
+
+        </div>
+      </div>
+      <div class="slidecontainer">
+        <input type="range" min="50000" max="50000000" value="100000" class="slider" id="venueRange">
+        <p>Value: <span id="venue_budget"></span></p>
+      </div>
+      <button type="button" id="prev4" style="margin-top: 20px;">Previous</button>
+      <button type="button" id="next5" style="margin-top: 20px;">Next</button>
+    </form>
+
+    <!-- ====================================================EVENT CATERING========================================= -->
+
+
+    <form action="" id="form6" name="form6">
+      <h3 class="fh3">CATERING</h3>
+
+      <div id="cateringCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" id="cateringCarouselInnerDiv">
+
+        </div>
+      </div>
+      <!-- <div class="slidecontainer">
+        <input type="range" min="50000" max="50000000" value="100000" class="slider" id="catererRange">
+        <p>Value: <span id="caterer_budget"></span></p>
+      </div> -->
+
+      <div class="row" style="margin-top: 20px;">
+        <div class="col-md-2">
+          <label for="veg">Vegetarian</label>
+          <input type="checkbox" name="veg" value="Vegetarian" id="veg" checked>
+        </div>
+        <div class="col-md-2">
+          <label for="non-veg">Non-Vegetarian</label>
+          <input type="checkbox" name="non_veg" value="Non-Vegetarian" id="non_veg">
+        </div>
+        <div class="col-md-2">
+          <label for="jain">Jain</label>
+          <input type="checkbox" name="jain" value="Jain" id="jain">
+        </div>
+        <div class="col-md-6" id="catererppp">
+          <div style="margin-top: 13px;">
+            <label for="normal">Select price per person</label>
+            <select name="ppp">
+              <option value="ct" selected hidden>Price</option>
+              <option value="200">200</option>
+              <option value="300">300</option>
+              <option value="500">500</option>
+              <option value="700">700</option>
+              <option value="800">800</option>
+              <option value="1000">1000</option>
+              <option value="1500">1500</option>
+              <option value="2000">2000</option>
+              <option value="3000">3000</option>
+              <option value="4000">4000</option>
+              <option value="5000">5000</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" id="prev5" style="margin-top: 20px;">Previous</button>
+      <button type="button" id="next6" style="margin-top: 20px;">Next</button>
+    </form>
+
+    <!-- ===================================================EVENT THEME============================================= -->
+
+
+    <form action="" id="form7" name="form7">
+      <h3 class="fh3">THEME</h3>
+
+      <div class="loc">
+        <label for="theme1">Normal</label>
+        <input type="radio" name="theme" id="theme1" value="Normal" checked>
+      </div>
+      <div class="loc">
+        <label for="theme2">Custom</label>
+        <input type="radio" name="theme" id="theme2" value="Custom">
+      </div>
+      <div id="norm" style="margin-top: 10px;">
+        <label for="normal">Select Theme</label>
+        <select name="theme-type" id="normal">
+        </select>
+      </div>
+      <div id="cust" hidden>
+        <label for="custom" style="text-align: left; margin-top: 10px;">Description: </label>
+        <br>
+        <textarea name="custom" id="custom" cols="100" rows="10"></textarea>
+      </div>
+      <div class="slidecontainer">
+        <input type="range" min="50000" max="50000000" value="100000" class="slider" id="themeRange">
+        <p>Value: <span id="theme_budget"></span></p>
+      </div>
+      <div class="btn-box">
+        <button type="button" id="prev6">Previous</button>
+        <button type="button" id="next7">Next</button>
+      </div>
+    </form>
+
+    <!-- ==================================================EXTRA FACILITIES========================================= -->
+
+    <form action="" id="form8">
+      <h3 class="fh3">EXTRA FACILITIES</h3>
+      <div class="row" style="margin-top: 50px;">
+        <div class="col-md-3">
+          <label for="celeb">Celebrity Appearance</label>
+          <input type="checkbox" id="celeb" value="Celibrity Appearance" name="celeb">
+        </div>
+        <div class="col-md-3">
+          <label for="dancers">Dancers</label>
+          <input type="checkbox" id="dancers" value="Dancers" name="dancers">
+        </div>
+        <div class="col-md-3">
+          <label for="music">DJ, Musicians and Band</label>
+          <input type="checkbox" id="music" value="DJ, Musicians and Band" name="music">
+        </div>
+        <div class="col-md-3">
+          <label for="stay">Guest Stays</label>
+          <input type="checkbox" id="stay" value="Guest Stays" name="stay">
+        </div>
+        <div class="col-md-3">
+          <label for="invitations">Invitation cards</label>
+          <input type="checkbox" id="invitations" value="Invitation Cards" name="invitations">
+        </div>
+        <div class="col-md-3">
+          <label for="ad">Advertisement</label>
+          <input type="checkbox" id="ad" value="Advertisement" name="ad">
+        </div>
+        <div class="col-md-3">
+          <label for="photo">Photoshoot and video recording</label>
+          <input type="checkbox" id="photo" value="Event Photoshoot and video recording" name="photo">
+        </div>
+        <div class="col-md-3">
+          <label for="eq">Electronics or sports equipments</label>
+          <input type="checkbox" id="eq" value="Electronics or sports equipments" name="eq">
+        </div>
+      </div>
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-md-2">
+          <label for="desciption">Description:</label>
+        </div>
+        <div class="col-md-10">
+          <textarea name="description" id="description" cols="98" rows="5"></textarea>
+
+        </div>
+      </div>
+
+      <button type="button" id="prev7" style="margin-top: 30px;">Previous</button>
+      <a href="/home"><button type="button" id="submit" style="margin-top: 30px;">Submit</button></a>
+    </form>
+
+    <!-- ===================================================PROGRESS BAR============================================== -->
+    <div class="step-row">
+      <div id="progress"></div>
+      <div class="step-col">Step 1</div>
+      <div class="step-col">Step 2</div>
+      <div class="step-col">Step 3</div>
+      <div class="step-col">Step 4</div>
+      <div class="step-col">Step 5</div>
+      <div class="step-col">Step 6</div>
+      <div class="step-col">Step 7</div>
+      <div class="step-col">Step 8</div>
+    </div>
+  </div>
+
+  <!-- ======================================================FOOTER=============================================== -->
+
+  <footer>
+    <div class="row text-center">
+      <div class="col-md-4 logo_img">
+        <img src="images/icons/FDM.png" alt="FDM Logo">
+      </div>
+      <div class="col-md-4">
+        <h4 style="text-align: left; font-size: 20px;"><b>Fabulous Digital Managements</b></h4>
+        <p style="text-align: left;">A 001, 1st Floor, Turquoise Plaza,<br>
+          Above Everyone,<br>
+          Near Nobody,<br>
+          Satellite, Ahmedabad,<br>
+          Gujarat 380007 <br>
+          support@fabulosdigitalmanagement.in <br>
+          +91-9898989898</p>
+      </div>
+      <div class="col-md-4">
+        <h3><b>Get in touch.</b></h3>
+        <p>To get in-touch with us, please subscribe to our email service.</p>
+        <input type="email" id="subs" style="position: relative; top : 3px; height: 20px; width: 50%">
+        <button type="button" class="sub btn btn-dark" id="btn1">Submit</button><br><br>
+        <img src="images/icons/fb.svg" alt="fb" style="width: 30px;height: 30px;margin-right: 10px;">
+        <img src="images/icons/insta.svg" alt="insta" style="width: 30px;height: 30px;margin-right: 10px;">
+        <img src="images/icons/linkedin.svg" alt="twitter" style="width: 30px;height: 30px;margin-right: 10px;">
+        <img src="images/icons/twitter.svg" alt="linkedin" style="width: 30px;height: 30px;margin-right: 10px;">
+        <img src="images/icons/whatsapp.svg" alt="whatsapp" style="width: 30px;height: 30px;">
+        <br><br>
+      </div>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      ©
+      <script type="text/javascript">
+        document.write(new Date().getFullYear());
+      </script> Copyright:
+      <a href="#">Fabulous Digital Managements, Inc. All Rights Reserved.</a>
+    </div>
+  </footer>
+
+
+  <!-- =======================================================JAVASCRIPT======================================================= -->
+
+  <!-- INTERNAL JAVASCRIPT -->
+  <script src="/js/services.js"></script>
+
+  <!-- BOOTSTRAP JAVASCRIPT -->
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>-->
+
+
+</body>
+
+</html>

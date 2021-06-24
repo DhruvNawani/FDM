@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!-- Bootstrap CSS -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+ integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+<!-- css -->
+<link rel="stylesheet" href="/scss/portfolio.css">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <title>FDM-Portfolio</title>
+</head>
+<body>
+    
+<!-- =============================================NAVBAR==================================================== -->
+
+<header>
+<div class="mainheader">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="/home"><img src="/icons/FDM.png" alt="" id="nav-logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/index">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact_us">Contact us</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li> -->
+            <!-- <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li> -->
+          </ul>
+          <!-- <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form> -->
+      <% if(!logged) { %>
+        <a href="/login" class="my-btn"><img src="/icons/login1.svg" id="login" alt=""></a>
+      <% } else { %>
+        <img src="/icons/profile1.svg" id="profile_img" alt="">
+        <ul id="dropdown" class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item"><a href="/profile" class="nav-link">Your Profile</a></li>
+          <li class="nav-item"><a href="/logout"  class="nav-link">
+            <!-- <img src="/icons/login1.svg" id="logout_img" alt=""> -->
+            Logout</a></li>
+        </ul>
+      <% } %>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+  <!-- ====================================================CONTENT============================================== -->
+
+  <section id="portfolio_page" class="text-center">
+    <h1 class="heading1 text-center">Fabulous Digital Managements</h1>
+    <h2>Portfolio</h2>
+
+    <ul class="nav" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="btn btn-primary active" id="All-tab" data-bs-toggle="tab" href="#All" role="tab"
+          aria-controls="home" aria-selected="true">Home</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="btn btn-primary" id="Social-tab" data-bs-toggle="tab" href="#Social" role="tab"
+          aria-controls="profile" aria-selected="false">Social</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="btn btn-primary" id="Corporate-tab" data-bs-toggle="tab" href="#Corporate" role="tab"
+          aria-controls="profile" aria-selected="false">Corporate</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="btn btn-primary" id="Activation-tab" data-bs-toggle="tab" href="#Activation" role="tab"
+          aria-controls="profile" aria-selected="false">Activation</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="btn btn-primary" id="Sports-tab" data-bs-toggle="tab" href="#Sports" role="tab"
+          aria-controls="profile" aria-selected="false">Sports</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="btn btn-primary" id="Academic-tab" data-bs-toggle="tab" href="#Academic" role="tab"
+          aria-controls="profile" aria-selected="false">Academic</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="btn btn-primary" id="Virtual-tab" data-bs-toggle="tab" href="#Virtual" role="tab"
+          aria-controls="profile" aria-selected="false">Virtual</button>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="All" role="tabpanel" aria-labelledby="All-tab">
+        <div class="row text-center">
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP1/BD2.jpg" alt=" " class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP1/EX1.jpg" alt="" class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP1/IN1.jpg" alt="" class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP1/SP1.jpg" alt="" class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP1/VM1.jpg" alt="" class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP1/WD1.jpg" alt="" class="img1">
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="Social" role="tabpanel" aria-labelledby="Social-tab">
+        <div class="row text-center">
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/So/Absolute-Events00017.jpg" alt=" " class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/So/Birthday-Parties-Birthday-party-planner-900x900.jpg" alt="" class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/So/Birthday-party-planner-Venue-Styling-900x900.jpg" alt="" class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6"> <img src="Images/IMGP4/So/downloadfile-2.bin.jpg" alt="" class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/So/Top-Wedding-Event-Management-Companies-in-Hyderabad.jpg" alt="" class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/So/wedding-event-management-250x250.jpg" alt="" class="img1">
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="Corporate" role="tabpanel" aria-labelledby="Corporate-tab">
+        <div class="row text-center">
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/Co/21.jpg" alt=" " class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/Co/cambridge-corporate-photographer-io-2016-003.jpg" alt="" class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/Co/corporate-meetings-hero.ashx.jpg" alt="" class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/Co/downloadfile-2.bin.jpg" alt="" class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/Co/downloadfile-3.bin.jpg" alt="" class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/Co/IMG_0818-Copy.jpeg" alt="" class="img1">
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="Activation" role="tabpanel" aria-labelledby="Activation-tab">
+        <div class="row text-center">
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/Ac/549x364-in-posts-hcc-brand-activation-2.jpg" alt=" " class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/Ac/9ef49717ed3f54e2d6e784bfbf33812d.jpg" alt="" class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/Ac/events-and-activation-500x500.png" alt="" class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/Ac/img298111.jpg" alt="" class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/Ac/LCA-Comerica.jpg" alt="" class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/Ac/superbowl_opener-credit_on-location-experiences.jpg" alt="" class="img1">
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="Sports" role="tabpanel" aria-labelledby="Sports-tab">
+        <div class="row text-center">
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/Sp/100497-largest_TheOtherTriathlon.jpg" alt=" " class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/Sp/boston-marathon-900x600.jpg" alt="" class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/Sp/downloadfile-2.bin.jpg" alt="" class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/Sp/GI_867787028_CommonwealthGames.jpg" alt="" class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/Sp/Singapore-Triathlon-38.jpg" alt="" class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/Sp/Sports_Tourism_b4dc5bad-9576-45d7-9484-907d13366f11.jpg" alt="" class="img1">
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="Academic" role="tabpanel" aria-labelledby="Academic-tab">
+        <div class="row text-center">
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/Ad/1__5CKuN1m4w2q1pH9ofqU5w.jpeg" alt=" " class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/Ad/2018-06-17_075251-600x420.jpg" alt="" class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/Ad/792202.jpg" alt="" class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/Ad/downloadfile-2.bin.jpg" alt="" class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/Ad/international-golden-awards-infes-2020-500x500.jpg" alt="" class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/Ad/Programming_challenge-e1522093628775.jpg" alt="" class="img1">
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="Virtual" role="tabpanel" aria-labelledby="Virtual-tab">
+        <div class="row text-center">
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/Vm/60479405_2179835755387252_7590945922167603200_n.jpg" alt=" " class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/Vm/AAT-Lobby-feat.jpg" alt="" class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/Vm/db5b05ecab03a936280b17cf61237f9c.jpg" alt="" class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/Vm/downloadfile-2.bin.png" alt="" class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/Vm/hp6c8565-opening-remark-full-screen-28r29.jpg" alt="" class="img1">
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <img src="Images/IMGP4/Vm/Virtual-seminar-in-vAcademia.png" alt="" class="img1">
+          </div>
+        </div>
+      </div>
+    </div>
+    <h3 class="heading3">Testimonials</h3>
+    <div class="row">
+      <div class="col-lg-6">
+        <img src="Images/IMGP4/RV/aditya.jpeg" alt="" class="img2">
+      </div>
+      <div class="col-lg-6">
+        <p class="p1"><em>"Best services and functionalities for a successful event." <br> -Aditya, 22, Student</em>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <img src="Images/IMGP4/RV/Shreyas.jpg" alt="" class="img2">
+      </div>
+      <div class="col-lg-6">
+        <p class="p1"><em>"Will remeber my 50th birthday forever and one the major reason is the Fabulous Management
+            Team." <br> -Shreyas, 50, Businessman</em></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <img src="Images/IMGP4/RV/Tata-Group-logo-3840x2160.png" alt="" class="img2">
+      </div>
+      <div class="col-lg-6">
+        <p class="p1"><em>"One of the best services we've ever received."<br> -TATA, MNC </em></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6" >
+        <img src="Images/IMGP4/RV/The-Times-Logo.png" alt="" class="img2">
+      </div>
+      <div class="col-lg-6">
+        <p class="p1"><em>"The people's voice says its the best." <br> -The Times, Media</em></p>
+      </div>
+    </div>
+    <h3 class="heading3">Clients</h3>
+    <div class="row">
+      <div class="col-lg-3 col-md-4">
+        <img src="Images/IMGP4/TC/1200px-Hero_MotoCorp.svg.png" alt="" class="img2">
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <img src="Images/IMGP4/TC/1200px-Reliance_Industries_Logo.svg.png" alt="" class="img2">
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <img src="Images/IMGP4/TC/adani.png" alt="" class="img2">
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <img src="Images/IMGP4/TC/Bajaj-Logo.png" alt="" class="img2">
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <img src="Images/IMGP4/TC/downloadfile-2.bin.jpg" alt="" class="img2">
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <img src="Images/IMGP4/TC/gallery_img5.jpg" alt="" class="img2">
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <img src="Images/IMGP4/TC/main-qimg-9eaba37029aa4dc22e1b2d55e219d56c.bin.png" alt="" class="img2">
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <img src="Images/IMGP4/TC/Tata-Group-logo-3840x2160.png" alt="" class="img2">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====================================================FOOTER=============================================== -->
+
+  <footer>
+    <div class="row text-center">
+      <div class="col-md-4 logo_img">
+        <img src="images/icons/FDM.png" alt="FDM Logo">
+      </div>
+      <div class="col-md-4">
+        <h4 style="text-align: left; font-size: 20px;"><b>Fabulous Digital Managements</b></h4>
+        <p style="text-align: left;">A 001, 1st Floor, Turquoise Plaza,<br>
+          Above Everyone,<br>
+          Near Nobody,<br>
+          Satellite, Ahmedabad,<br>
+          Gujarat 380007 <br>
+          support@fabulosdigitalmanagement.in <br>
+          +91-9898989898</p>
+      </div>
+      <div class="col-md-4">
+        <h3><b>Get in touch.</b></h3>
+        <p>To get in-touch with us, please subscribe to our email service.</p>
+        <input type="email" id="subs" style="position: relative; top : 3px; height: 20px; width: 50%">
+        <button type="button" class="sub btn btn-dark" id="btn1">Submit</button><br><br>
+        <img src="images/icons/fb.svg" alt="fb" style="width: 30px;height: 30px;margin-right: 10px;">
+        <img src="images/icons/insta.svg" alt="insta" style="width: 30px;height: 30px;margin-right: 10px;">
+        <img src="images/icons/linkedin.svg" alt="twitter" style="width: 30px;height: 30px;margin-right: 10px;">
+        <img src="images/icons/twitter.svg" alt="linkedin" style="width: 30px;height: 30px;margin-right: 10px;">
+        <img src="images/icons/whatsapp.svg" alt="whatsapp" style="width: 30px;height: 30px;">
+        <br><br>
+      </div>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      ©
+      <script type="text/javascript">
+        document.write(new Date().getFullYear());
+      </script> Copyright:
+      <a href="#">Fabulous Digital Managements, Inc. All Rights Reserved.</a>
+    </div>
+  </footer>
+
+
+
+  <!-- =======================================================JAVASCRIPT======================================================= -->
+
+    <!-- INTERNAL JAVASCRIPT -->
+    <script src="/js/portfolio.js"></script>
+
+    <!-- BOOTSTRAP JAVASCRIPT -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>-->
+
+
+</body>
+</html>

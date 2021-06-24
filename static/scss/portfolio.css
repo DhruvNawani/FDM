@@ -1,0 +1,164 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  background-color: #46db98;
+  width: auto;
+  height: auto;
+  overflow-x: hidden;
+}
+
+p {
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 35px;
+  margin: 60px 0 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  margin: 3% 0;
+  text-align: center;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 3% 0;
+  text-align: center;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0%;
+  z-index: 2;
+}
+
+#nav-logo {
+  width: 40px;
+}
+
+.my-header {
+  margin: 30px 0;
+}
+
+.navbar {
+  background-color: black;
+  padding: 0;
+}
+
+.navbar li {
+  float: right;
+  list-style: none;
+  margin: 0 10px;
+}
+
+.navbar li a {
+  padding: 3px;
+  text-decoration: none;
+  color: white;
+  border-radius: 4px;
+}
+
+.navbar li a:hover {
+  background-color: chartreuse;
+  color: black;
+  font-weight: 700;
+}
+
+#login, #profile_img, #logout_img {
+  width: 25px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#dropdown {
+  margin-right: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: none;
+}
+
+.my-btn {
+  padding: 5px 0;
+  border: 0;
+}
+
+#portfolio_page {
+  padding: 0 20%;
+}
+
+#myTab {
+  margin: 50px auto 20px;
+}
+
+.btn-group {
+  padding: 3% 0;
+}
+
+.img1 {
+  height: 180px;
+  width: 320px;
+  padding: 10px;
+}
+
+.img2 {
+  margin-top: 15px;
+  height: 100px;
+  width: 100px;
+}
+
+.p1 {
+  float: left;
+  padding: 10% 0 0;
+}
+
+.btn {
+  padding: 5px;
+}
+
+.nav {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+footer {
+  margin-top: 50px;
+  background-color: #120078;
+  color: white;
+  padding: 20px 0;
+  color: #ff7d04;
+}
+
+.sub {
+  border: 0;
+  border-radius: 4px;
+}
+
+.sub:hover {
+  background-color: chartreuse;
+  color: black;
+  font-weight: 700;
+}
+
+.col-md-4 {
+  padding: 0 7%;
+  margin: 20px auto;
+}
+
+#btn1 {
+  padding: 5px;
+}
+/*# sourceMappingURL=portfolio.css.map */

@@ -1,0 +1,107 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  background-color: #46db98;
+  width: auto;
+  height: auto;
+  overflow-x: hidden;
+}
+
+p {
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 35px;
+  margin: 60px 0 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  margin: 3% 0;
+  text-align: center;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 5%;
+}
+
+h5 {
+  font-weight: 700;
+}
+
+hr {
+  border-color: black;
+  border-style: solid none none;
+  border-width: 2px;
+  opacity: 1;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0%;
+  z-index: 2;
+}
+
+#nav-logo {
+  width: 40px;
+}
+
+.my-header {
+  margin: 30px 0;
+}
+
+.navbar {
+  background-color: black;
+  padding: 0;
+}
+
+.navbar li {
+  float: right;
+  list-style: none;
+  margin: 0 10px;
+}
+
+.navbar li a {
+  padding: 3px;
+  text-decoration: none;
+  color: white;
+  border-radius: 4px;
+}
+
+.navbar li a:hover {
+  background-color: chartreuse;
+  color: black;
+  font-weight: 700;
+}
+
+#login, #profile_img, #logout_img {
+  width: 25px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#dropdown {
+  margin-right: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: none;
+}
+
+.my-btn {
+  padding: 5px 0;
+  border: 0;
+}
+/*# sourceMappingURL=subscribers.css.map */
